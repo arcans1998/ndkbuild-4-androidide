@@ -27,7 +27,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Run Tests
-      run: ./gradlew build --stacktrace
+      run: gradle build --stacktrace
 
   build:
     name: Build Apk
@@ -52,4 +52,4 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew build --stacktrace
+      run: gradle build --stacktrace
