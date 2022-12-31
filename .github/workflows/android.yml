@@ -51,5 +51,14 @@ jobs:
        gradle-version: 7.2
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
+    - name: Restore cache
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.gradle/caches
+          ~/.gradle/wrapper
+        key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+        restore-keys: |
+            ${{ runner.os }}-gradle-
     - name: Build with Gradle
-      run: ./gradlew build --stacktrace
+      run: ./gradlew assembleDebug -i
