@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: '17'
       - name: Run Tests
-        run: bash ./gradlew build
+        run: ./gradlew build
 
   build:
     name: Build Apk
@@ -35,4 +35,4 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: bash ./gradlew assembleDebug -a
+      run: ./gradlew assembleDebug -a
