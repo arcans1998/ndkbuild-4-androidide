@@ -18,11 +18,11 @@ jobs:
         with:
           java-version: '17'
       - name: Run Tests
-        run: bash ./gradlew test --stacktrace  
+        run: bash ./gradlew build
 
   build:
+    name: Build Apk
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: set up JDK 17
