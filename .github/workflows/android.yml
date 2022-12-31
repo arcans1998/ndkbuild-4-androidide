@@ -25,13 +25,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Uses Checkout
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
     - name: Ndk Source
-    - uses: actions/checkout@v2
-    - uses: nttld/setup-ndk@v1
+      uses: nttld/setup-ndk@v1
       with:
         ndk-version: r24
-    - run: ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_APPLICATION_MK=./Application.mk
+        run: ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk NDK_APPLICATION_MK=./Application.mk
     - name: set up JDK 17
       uses: actions/setup-java@v3
       with:
