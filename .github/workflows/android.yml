@@ -17,10 +17,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-      - name: Set up Gradle
-        uses: actions/setup-gradle@v2
-        with:
-          gradle-version: latest
+          gradle-version: 7.2.0
       - name: Run Tests
         run: ./gradlew --version
 
@@ -34,11 +31,8 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: gradle
-    - name: Set up Gradle
-      uses: actions/setup-gradle@v2
-      with:
-        gradle-version: latest
+        gradle-version: 7.2.0
+        
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
