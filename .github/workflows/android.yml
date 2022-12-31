@@ -18,7 +18,7 @@ jobs:
         with:
           java-version: '17'
       - name: Set up Gradle
-        uses: actions/setup-gradle@v3
+        uses: actions/setup-gradle@v2
         with:
           gradle-version: latest
       - name: Run Tests
